@@ -1,0 +1,104 @@
+@import '_variables';
+@import '../node_modules/bootstrap/scss/bootstrap.scss';
+@import '../node_modules/@fontsource/roboto/100.css';
+@import '../node_modules/@fontsource/roboto/300.css';
+@import '../node_modules/@fontsource/roboto/400.css';
+@import '../node_modules/@fontsource/roboto/500.css';
+@import '../node_modules/@fontsource/roboto/700.css';
+@import '../node_modules/@fontsource/roboto/900.css';
+@import '../node_modules/@fontsource/roboto/100-italic.css';
+@import '../node_modules/@fontsource/roboto/300-italic.css';
+@import '../node_modules/@fontsource/roboto/400-italic.css';
+@import '../node_modules/@fontsource/roboto/500-italic.css';
+@import '../node_modules/@fontsource/roboto/700-italic.css';
+@import '../node_modules/@fontsource/roboto/900-italic.css';
+
+// OVERRIDES
+
+body, html {
+    font-family: 'Roboto', sans-serif;
+}
+p, label, h1, h2, h3 {
+    margin: 0;
+}
+
+// CUSTOM
+.masthead {
+    height: 100vh;
+
+    #masthead-content {
+        background-image: url('../img/banner.png');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        position: relative;
+
+        #tagline {
+            position: absolute;
+            top: 25%;
+            transform: translate(0, -25%);
+            left: 0;
+            background: linear-gradient(90deg, #ffffffd6 50%, transparent);
+            padding: 43.2px 98px 43.2px 298px;
+            font-style: italic;
+
+            .row--1, .row--3 {
+                h2 {
+                    font-weight: 500;
+                    color: $gray;
+                }
+            }
+            .row--2 {
+                h1 {
+                    font-size: 3rem;
+                    font-weight: 600;
+                }
+            }
+        }
+    }
+
+    .form-container {
+        position: absolute;
+        bottom: 10%;
+        left: 50%;
+        transform: translate(-50%, -10%);
+
+        .left {
+            position: relative;
+            border-radius: 26px 0 0 26px;
+
+            h3 {
+                font-weight: 700;
+            }
+            p {
+                font-size: 1.2rem;
+            }
+            &::after {
+                content: "";
+                position: absolute;
+                right: -39px;
+                top: 50%;
+                transform: translate(0, -50.25%);
+                width: 20px;
+                height: 100%;
+                border-top: 65.9px solid transparent;
+                border-bottom: 65.9px solid transparent;
+                border-left: 40px solid $primary;
+            }
+        }
+        .form {
+            padding: 0 30px 0 60px;
+            flex-grow: 1;
+            border-radius: 0 26px 26px 0;
+            
+            .instruction {
+                h3 {
+                    color: $gray;
+                }
+            }
+            input[type=submit] {
+                border: 2px solid #6f973b;
+            }
+        }
+    }
+}
